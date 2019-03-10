@@ -4,13 +4,13 @@ workflow "Test Workflow" {
 }
 
 action "Build" {
-  uses = "ianwalter/puppeteer@v1.0.0"
+  uses = "buildkite/docker-puppeteer@v1.13.0"
   runs = "npm"
   args = "install"
 }
 
 action "Test" {
-  uses = "ianwalter/puppeteer@v1.0.0"
+  uses = "buildkite/docker-puppeteer@v1.13.0"
   needs = ["Build"]
   runs = "npm"
   args = "test"
