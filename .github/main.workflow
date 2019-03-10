@@ -12,7 +12,7 @@ action "Build" {
 action "Test" {
   uses = "ianwalter/puppeteer@v1.0.0"
   needs = ["Build"]
-  runs "npm"
+  runs = "npm"
   args = "test"
   secrets = ["PERCY_TOKEN"]
 }
